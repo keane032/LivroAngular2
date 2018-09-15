@@ -1,0 +1,15 @@
+<h2>
+  event-binding works!
+</h2>
+
+<button (click)="meuClick()">Click aqui</button>
+
+<input	#valorInput	(keyup)="digitouVarTemplate(valorInput.value)">
+
+<!-- <input (keyup)="digitou($event)"> -->
+
+<h3>evento	keyup.enter	adicionar	na	lista</h3>
+<input	type="text"	#conteudo	(keyup.enter)="adicionar(conteudo.value);	conteudo.value=''">
+<ul>
+			<li	*ngFor="let	item	of	valores">{{item}}</li>
+</ul>
